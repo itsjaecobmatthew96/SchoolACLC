@@ -15,14 +15,18 @@ public class ProgramLauncher
 
         do 
         {
-            System.out.println("==========================================");
+            System.out.println("\n==========================================");
             System.out.println("\nChoose a school activity:");
             System.out.println("\n1. Biodata");
             System.out.println("\n2. Calculator");
             System.out.println("\n3. Relational Operators");
-            System.out.println("\n4. Exit");
+            System.out.println("\n4. Menu Select");
+            System.out.println("\n5. Menu Select Copy");
+            System.out.println("\n6. Midterm Activity 1");
+            System.out.println("\n7. Midterm Activity 2");
+            System.out.println("\n8. Exit");
             System.out.println("\n==========================================");
-            System.out.print("\nEnter your choice: ");
+            System.out.print("\nEnter your choice: \n");
 
             choice = readChoice();
 
@@ -38,13 +42,25 @@ public class ProgramLauncher
                     runProgram("RelationalOperators.java");
                     break;
                 case 4:
+                    runProgram("MenuSelect.java");
+                    break;
+                case 5:
+                    runProgram("MenuSelectCopy.java");
+                    break;
+                case 6:
+                    runProgram("MidtermAct1.java");
+                    break;
+                case 7:
+                    runProgram("MidtermAct2.java");
+                    break;
+                case 8:
                     System.out.println("Goodbye!");
                     break;
                 default:
                     System.out.println("Invalid choice.");
             }
         } 
-        while (choice != 4);
+        while (choice != 8);
     }
 
     private static int readChoice()
@@ -60,12 +76,10 @@ public class ProgramLauncher
 
     private static void runProgram(String fileName) 
     {
-        String sourcePath = "School Activity Projects" + File.separator + fileName;
-
         try
 
         {
-            Process process = new ProcessBuilder(JAVA_COMMAND, sourcePath)
+            Process process = new ProcessBuilder(JAVA_COMMAND, fileName)
                     .inheritIO()
                     .start();
             process.waitFor();

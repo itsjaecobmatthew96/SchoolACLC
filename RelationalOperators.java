@@ -23,7 +23,7 @@ public class RelationalOperators
             System.out.println("The Number is Odd");
         }
 
-
+        scan.close();
     
 
        // System.out.println("Enter a number: ");
