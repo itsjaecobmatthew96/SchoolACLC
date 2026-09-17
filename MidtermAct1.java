@@ -9,6 +9,7 @@ public class MidtermAct1{
 
         while (ContinueProgram == 1) {
             
+        System.out.println("\n=======================================\n");    
         System.out.println("Choose your Option of Clothes\n");
         System.out.println("[1] T-Shirt");
         System.out.println("[2] Pants");
@@ -18,13 +19,16 @@ public class MidtermAct1{
         clothingChoice = Integer.parseInt(scan.nextLine());
 
         if (clothingChoice == 1) {
+
+            System.out.println("\n=======================================\n");
             System.out.println("\n[1] Adidas - Php 600.00");
             System.out.println("[2] Nike - Php 700.00");
             System.out.println("[3] Uniqlo - Php 800.00");
-            System.out.println("\n=======================================\n");
-            System.out.print("Select Brand: ");
+            System.out.println("\n=======================================");
+            System.out.print("\nSelect Brand: ");
             // Ginagawang integer ang brand choice na inilagay ng user.
             brandChoice = Integer.parseInt(scan.nextLine());
+            System.out.println("\n=======================================\n");
 
             if (brandChoice == 1) {
                 price = 600;
@@ -68,6 +72,7 @@ public class MidtermAct1{
         System.out.print("Enter Quantity: ");
     // Ginagawang integer ang quantity na inilagay ng user.
         quantity = Integer.parseInt(scan.nextLine());
+        System.out.println("\n=======================================\n");
 
         bill = price * quantity;
         System.out.println("\nTotal Bill: Php " + bill + ".00");
@@ -75,6 +80,7 @@ public class MidtermAct1{
         System.out.print("Enter Tender Amount: Php ");
     // Ginagawang integer ang tender o bayad na inilagay ng user.
         tender = Integer.parseInt(scan.nextLine());
+        System.out.println("\n=======================================\n");
 
         if (tender < bill) {
             System.out.println("Insufficient amount. Please provide enough money.");
