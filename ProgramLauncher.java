@@ -26,9 +26,11 @@ public class ProgramLauncher
             System.out.println("\n7. Midterm Activity 2");
             System.out.println("\n8. Exit");
             System.out.println("\n==========================================");
-            System.out.print("\nEnter your choice: \n");
+            System.out.print("\nEnter your choice: ");
+            
 
             choice = readChoice();
+            System.out.println("\n==========================================");
 
             switch (choice)
             {
