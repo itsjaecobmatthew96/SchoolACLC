@@ -12,14 +12,19 @@ public class MidtermAct2 {
         while (ContinueProgram == 1) {
             totalHoursWorked = 0;
 
+
+        System.out.println("\n=======================================\n");
         System.out.print("Enter your Name: ");
         name = scan.nextLine();
 
-        System.out.println("Position Choices");
+        System.out.println("\n=======================================\n");
+        System.out.println("Position Choices\n");
         System.out.println("1. IT Head");
         System.out.println("2. Teacher");
         System.out.println("3. Janitor");
-        System.out.print("Enter your Position Choice: ");
+        System.out.println("\n=======================================\n");
+        System.out.print("Enter your Position Choice: \n");
+        System.out.println("\n=======================================\n");
         int positionChoice = scan.nextInt();
 
         if (positionChoice == 1) {
@@ -39,20 +44,24 @@ public class MidtermAct2 {
         }
 
         for (int i = 1; i <= 5; i++) {
-            System.out.print("Enter your Time IN " + i + ": ");
+
+            System.out.print("\n=======================================\n");
+            System.out.print("\nEnter your Time IN " + i + ": ");
             int timeIn = scan.nextInt();
             System.out.print("Enter your Time OUT " + i + ": ");
             int timeOut = scan.nextInt();
+            System.out.print("\n=======================================\n");
 
             totalHoursWorked = totalHoursWorked + ((timeOut - timeIn -100)/100);
-            System.out.println("Day " + i + " hours worked: " + (timeOut - timeIn-100)/100);
+            System.out.println("\nDay " + i + " hours worked: " + (timeOut - timeIn-100)/100);
         }
 
         grossPay = totalHoursWorked * ratePerHour;
         totalDeduction = sssDeduction + pagibigDeduction + philhealthDeduction;
         netPay = grossPay - totalDeduction;
 
-        System.out.println("\nEmployee Name: " + name);
+        System.out.println("\n=======================================\n");
+        System.out.println("Employee Name: " + name);
         System.out.println("Position: " + position);
         System.out.println("Rate per Hour: " + ratePerHour);
         System.out.println("Total Hours Worked: " + totalHoursWorked);
@@ -61,6 +70,7 @@ public class MidtermAct2 {
         System.out.println("Pag-IBIG Deduction: " + pagibigDeduction);
         System.out.println("PhilHealth Deduction: " + philhealthDeduction);
         System.out.println("Total Deductions: " + totalDeduction);
+        System.out.println("\n---------------------------------------\n");
         System.out.println("Net Pay: " + netPay);
         System.out.println("\n=======================================\n");
 
