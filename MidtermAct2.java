@@ -23,10 +23,9 @@ public class MidtermAct2 {
         System.out.println("2. Teacher");
         System.out.println("3. Janitor");
         System.out.println("\n=======================================\n");
-        System.out.print("Enter your Position Choice: \n");
-        System.out.println("\n=======================================\n");
+        System.out.print("Enter your Position Choice: ");
         int positionChoice = scan.nextInt();
-
+       // System.out.println("\n=======================================\n");
         if (positionChoice == 1) {
             position = "IT Head";
             ratePerHour = 140;
@@ -53,7 +52,7 @@ public class MidtermAct2 {
             System.out.print("\n=======================================\n");
 
             totalHoursWorked = totalHoursWorked + ((timeOut - timeIn -100)/100);
-            System.out.println("\nDay " + i + " hours worked: " + (timeOut - timeIn-100)/100);
+            System.out.println("\nDay " + i + " hour/s worked: " + (timeOut - timeIn-100)/100);
         }
 
         grossPay = totalHoursWorked * ratePerHour;
@@ -78,7 +77,11 @@ public class MidtermAct2 {
         ContinueProgram = scan.nextInt();
         scan.nextLine();
         }
+         
+        scan.close();
+
     }
+  
 }
 
 
