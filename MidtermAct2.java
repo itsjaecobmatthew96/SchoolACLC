@@ -22,8 +22,8 @@ public class MidtermAct2 {
         System.out.println("1. IT Head");
         System.out.println("2. Teacher");
         System.out.println("3. Janitor");
-        System.out.println("\n=======================================\n");
-        System.out.print("Enter your Position Choice: ");
+        System.out.println("\n=======================================");
+      /*   System.out.print("Enter your Position Choice: ");
         int positionChoice = scan.nextInt();
        // System.out.println("\n=======================================\n");
         if (positionChoice == 1) {
@@ -40,7 +40,35 @@ public class MidtermAct2 {
             ratePerHour = 0;
             System.out.println("Invalid position choice.");
             return;
-        }
+        }*/
+
+            int positionChoice;
+
+while (true) {
+    System.out.print("\nEnter your Position Choice: ");
+    positionChoice = scan.nextInt();
+
+    if (positionChoice == 1) {
+        position = "IT Head";
+        ratePerHour = 140;
+        break;
+
+    } else if (positionChoice == 2) {
+        position = "Teacher";
+        ratePerHour = 120;
+        break;
+
+    } else if (positionChoice == 3) {
+        position = "Janitor";
+        ratePerHour = 100;
+        break;
+
+    } else {
+        System.out.print("\n=======================================\n");
+        System.out.println("\nINVALID INPUT!!! \n\nPLEASE CHOOSE BETWEEN: 1, 2, OR 3.");
+        System.out.print("\n=======================================\n");
+    }
+}
 
         for (int i = 1; i <= 5; i++) {
 
