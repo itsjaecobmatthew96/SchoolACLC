@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-public class MidtermAct2 {
-    public static void main(String[] args) {
+public class MidtermAct2 
+{
+    public static void main(String[] args) 
+    {
         Scanner scan = new Scanner(System.in);
 
         String name, position;
@@ -9,8 +11,9 @@ public class MidtermAct2 {
         int grossPay, sssDeduction = 300, pagibigDeduction = 200, philhealthDeduction = 100;
         int totalDeduction, netPay, ContinueProgram = 1;
 
-        while (ContinueProgram == 1) {
-            totalHoursWorked = 0;
+        while (ContinueProgram == 1) 
+        {
+        totalHoursWorked = 0;
 
 
         System.out.println("\n=======================================\n");
@@ -76,7 +79,8 @@ public class MidtermAct2 {
                 }
 
 
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 5; i++) 
+        {
 
             System.out.print("\n=======================================\n");
             System.out.print("\nEnter your Time IN " + i + ": ");
