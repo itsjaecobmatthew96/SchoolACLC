@@ -8,7 +8,7 @@ public class MidtermAct2
 
         String name, position;
         int ratePerHour, totalHoursWorked = 0;
-        int grossPay, sssDeduction = 300, pagibigDeduction = 200, philhealthDeduction = 100;
+        int grossPay, sssDeduction, pagibigDeduction, philhealthDeduction ;
         int totalDeduction, netPay, ContinueProgram = 1;
 
         while (ContinueProgram == 1) 
@@ -94,6 +94,13 @@ public class MidtermAct2
         }
 
         grossPay = totalHoursWorked * ratePerHour;
+   
+        System.out.print("Enter SSS Deduction: ");
+        sssDeduction = scan.nextInt();
+        System.out.print("Enter Pag-IBIG Deduction: ");
+        pagibigDeduction = scan.nextInt();
+        System.out.print("Enter PhilHealth Deduction: ");
+        philhealthDeduction = scan.nextInt();
         totalDeduction = sssDeduction + pagibigDeduction + philhealthDeduction;
         netPay = grossPay - totalDeduction;
 
