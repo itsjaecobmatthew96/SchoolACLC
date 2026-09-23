@@ -46,7 +46,7 @@ public class MidtermAct2
         }*/
             int positionChoice;
 
-                while (true) 
+                while (true)
                 {
                     System.out.print("\nEnter your Position Choice: ");
                     positionChoice = scan.nextInt();
