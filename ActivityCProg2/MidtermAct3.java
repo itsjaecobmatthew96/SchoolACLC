@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MIdtermAct3 {
+public class MidtermAct3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int pin = 123456;
@@ -10,7 +10,7 @@ public class MIdtermAct3 {
         int balance = 0;
 
         System.out.println("\n=======================================\n");
-        System.out.print("Enter your Pin: ");
+        System.out.print("Enter your PIN: ");
         inputPin = scan.nextInt();
 
         while (inputPin != pin) {
