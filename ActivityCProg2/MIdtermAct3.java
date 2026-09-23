@@ -13,10 +13,18 @@ public class MIdtermAct3 {
         System.out.print("Enter your Pin: ");
         inputPin = scan.nextInt();
 
+        while (inputPin != pin) {
+            System.out.println("\n=======================================\n");
+            System.out.println("Invalid PIN.");
+            System.out.println("\n=======================================\n");
+            System.out.print("Enter your PIN: ");
+            inputPin = scan.nextInt();
+        }
+
         if (inputPin == pin) {
-            while (continueProgram == 1) {
+            do {
                 System.out.println("\n=======================================\n");
-                System.out.println("~~~ATM NI ALING OLIVER~~~");
+                System.out.println("~~~ATM NI ALING OLIVER~~~\n");
                 System.out.println("[1] Withdraw");
                 System.out.println("[2] Deposit");
                 System.out.println("[3] Check Balance");
@@ -33,13 +41,13 @@ public class MIdtermAct3 {
                     } 
                     else {
                         balance -= withdraw;
-                        System.out.println("Withdraw successful. New balance: " + balance);
+                        System.out.println("Withdraw successful. \n\nNew balance: " + balance);
                     }
                 } else if (transactionChoice == 2) {
                     System.out.print("Enter amount to deposit: ");
-                    deposit = scan.nextInt();
+                     deposit = scan.nextInt();
                     balance += deposit;
-                    System.out.println("Deposit successful. New balance: " + balance);
+                    System.out.println("Deposit successful. \n\nNew balance: " + balance);
                 } else if (transactionChoice == 3) {
                     System.out.println("Current balance: " + balance);
                 } else {
@@ -48,9 +56,7 @@ public class MIdtermAct3 {
 
                 System.out.println("\nDo you want to do another transaction? (1 for Yes, 0 for No): ");
                 continueProgram = scan.nextInt();
-            }
-        } else {
-            System.out.println("Invalid PIN.");
+            } while (continueProgram == 1);
         }
 
         scan.close();
