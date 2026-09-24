@@ -15,7 +15,7 @@ public class MidtermAct3 {
 
         while (inputPin != pin) {
             System.out.println("\n=======================================\n");
-            System.out.println("Invalid PIN.");
+            System.out.println("INVALID PIN!!!");
             System.out.println("\n=======================================\n");
             System.out.print("ENTER YOUR 6 DIGITS PIN AGAIN : ");
             inputPin = scan.nextInt();
@@ -41,7 +41,7 @@ public class MidtermAct3 {
 
                     if (withdraw > balance) {
                         System.out.println("\n=======================================\n");
-                        System.out.println("\nInsufficient balance.");
+                        System.out.println("Insufficient balance.");
                         System.out.println("\n=======================================\n");
                     } 
                     else {
@@ -66,7 +66,11 @@ public class MidtermAct3 {
                     System.out.println("Invalid transaction choice.");
                 }
 
-                System.out.println("\nDo you want to do another transaction? (1 for Yes, 0 for No): ");
+                System.out.println("Do you want to do another transaction? \n");
+                System.out.println("[1] Yes");
+                System.out.println("[2] No");
+                System.out.println("\n=======================================\n");
+                System.out.print("Enter your choice: ");
                 continueProgram = scan.nextInt();
             } while (continueProgram == 1);
         }
