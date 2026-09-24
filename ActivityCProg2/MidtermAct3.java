@@ -73,4 +73,4 @@ public class MidtermAct3 {
 
         scan.close();
     }
-}n
+}
