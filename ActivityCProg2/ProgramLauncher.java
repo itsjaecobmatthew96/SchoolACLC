@@ -24,7 +24,8 @@ public class ProgramLauncher
             System.out.println("\n5. Menu Select Copy");
             System.out.println("\n6. Midterm Activity 1");
             System.out.println("\n7. Midterm Activity 2");
-            System.out.println("\n8. Exit");
+            System.out.println("\n8. Midterm Activity 3");
+            System.out.println("\n9. Exit");
             System.out.println("\n==========================================");
             System.out.print("\nEnter your choice: ");
             
@@ -56,6 +57,9 @@ public class ProgramLauncher
                     runProgram("MidtermAct2.java");
                     break;
                 case 8:
+                    runProgram("MidtermAct3.java");
+                    break;
+                case 9:
                     System.out.println("Goodbye!");
                     break;
                 // case 9:

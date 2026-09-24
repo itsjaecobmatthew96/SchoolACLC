@@ -2,13 +2,38 @@ import java.util.Scanner;
 
 public class MidtermAct2 
 {
+    private static int readMilitaryTime(Scanner scan, String prompt)
+    {
+        while (true)
+        {
+            System.out.print(prompt);
+            String input = scan.nextLine().trim();
+
+            if (input.matches("\\d{4}"))
+            {
+                int time = Integer.parseInt(input);
+                int hours = time / 100;
+                int minutes = time % 100;
+
+                if (hours <= 23 && minutes <= 59)
+                {
+                    return hours * 60 + minutes;
+                }
+            }
+
+            System.out.println("\n========================================\n");
+            System.out.println("INVALID TIME INPUT!!! \n\nPLEASE ENTER A TIME FROM 0000 TO 2359.");
+            System.out.println("\n========================================\n");
+        }
+    }
+
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
 
         String name, position;
         int ratePerHour, totalHoursWorked = 0;
-        int grossPay, sssDeduction, pagibigDeduction, philhealthDeduction ;
+        int grossPay, sssDeduction = 300, pagibigDeduction = 200, philhealthDeduction = 100;
         int totalDeduction, netPay, ContinueProgram = 1;
 
         while (ContinueProgram == 1) 
@@ -78,29 +103,36 @@ public class MidtermAct2
                            }
                 }
 
+        scan.nextLine();
 
         for (int i = 1; i <= 5; i++) 
         {
 
-            System.out.print("\n=======================================\n");
-            System.out.print("\nEnter your Time IN " + i + ": ");
-            int timeIn = scan.nextInt();
-            System.out.print("Enter your Time OUT " + i + ": ");
-            int timeOut = scan.nextInt();
-            System.out.print("\n=======================================\n");
+            System.out.print("\n======================================\n\n");
+            int timeIn = readMilitaryTime(scan, "Enter your Time IN " + i + " (HHMM): ");
+            System.out.print("\n=======================================\n\n");
+            int timeOut = readMilitaryTime(scan, "Enter your Time OUT " + i + " (HHMM): ");
+            System.out.print("\n=======================================");
 
-            totalHoursWorked = totalHoursWorked + ((timeOut - timeIn -100)/100);
-            System.out.println("\nDay " + i + " hour/s worked: " + (timeOut - timeIn-100)/100);
+            if (timeOut < timeIn)
+            {
+                timeOut += 24 * 60;
+            }
+
+            int dailyMinutesWorked = timeOut - timeIn - 60;
+            totalHoursWorked = totalHoursWorked + dailyMinutesWorked / 60;
+            System.out.println("\n\nDay " + i + " hour/s worked: " + dailyMinutesWorked / 60);
+
         }
 
         grossPay = totalHoursWorked * ratePerHour;
    
-        System.out.print("Enter SSS Deduction: ");
-        sssDeduction = scan.nextInt();
-        System.out.print("Enter Pag-IBIG Deduction: ");
-        pagibigDeduction = scan.nextInt();
-        System.out.print("Enter PhilHealth Deduction: ");
-        philhealthDeduction = scan.nextInt();
+        // System.out.print("Enter SSS Deduction: ");
+        // sssDeduction = scan.nextInt();
+        // System.out.print("Enter Pag-IBIG Deduction: ");
+        // pagibigDeduction = scan.nextInt();
+        // System.out.print("Enter PhilHealth Deduction: ");
+      //  philhealthDeduction = scan.nextInt();
         totalDeduction = sssDeduction + pagibigDeduction + philhealthDeduction;
         netPay = grossPay - totalDeduction;
 

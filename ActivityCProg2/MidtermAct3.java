@@ -3,21 +3,21 @@ import java.util.Scanner;
 public class MidtermAct3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int pin = 123456;
+        int pin = 121212;
         int inputPin;
         int continueProgram = 1;
         int withdraw, deposit;
         int balance = 0;
 
         System.out.println("\n=======================================\n");
-        System.out.print("Enter your PIN: ");
+        System.out.print("ENTER YOUR 6 DIGITS PIN: ");
         inputPin = scan.nextInt();
 
         while (inputPin != pin) {
             System.out.println("\n=======================================\n");
             System.out.println("Invalid PIN.");
             System.out.println("\n=======================================\n");
-            System.out.print("Enter your PIN: ");
+            System.out.print("ENTER YOUR 6 DIGITS PIN AGAIN : ");
             inputPin = scan.nextInt();
         }
 
