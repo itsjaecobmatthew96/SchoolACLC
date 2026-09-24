@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import javax.swing.JOptionPane;
 
 public class ProgramLauncherGUI {
 
@@ -28,7 +29,7 @@ public class ProgramLauncherGUI {
             panel.add(titleLabel);
 
             // Activity names and corresponding filenames
-            String[] activities = {
+            String[] activities
                 "1. Biodata",
                 "2. Calculator",
                 "3. Relational Operators",
