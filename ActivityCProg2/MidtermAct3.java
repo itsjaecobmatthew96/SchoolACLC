@@ -33,23 +33,35 @@ public class MidtermAct3 {
                 int transactionChoice = scan.nextInt();
 
                 if (transactionChoice == 1) {
+                    System.out.println("\n=======================================");
+                    System.out.println("\nCurrent balance : " +balance);
+                    System.out.println("\n=======================================\n");
                     System.out.print("Enter amount to withdraw: ");
                     withdraw = scan.nextInt();
 
                     if (withdraw > balance) {
-                        System.out.println("Insufficient balance.");
+                        System.out.println("\n=======================================\n");
+                        System.out.println("\nInsufficient balance.");
+                        System.out.println("\n=======================================\n");
                     } 
                     else {
                         balance -= withdraw;
+                        System.out.println("\n=======================================\n");
                         System.out.println("Withdraw successful. \n\nNew balance: " + balance);
+                        System.out.println("\n=======================================\n");
                     }
                 } else if (transactionChoice == 2) {
+                    System.out.println("\n=======================================\n");
                     System.out.print("Enter amount to deposit: ");
                      deposit = scan.nextInt();
                     balance += deposit;
-                    System.out.println("Deposit successful. \n\nNew balance: " + balance);
+                    System.out.println("\n=======================================\n");
+                    System.out.println("Deposit Successful!!. \n\nNew balance: " + balance);
+                    System.out.println("\n=======================================\n");
                 } else if (transactionChoice == 3) {
+                    System.out.println("\n=======================================\n");
                     System.out.println("Current balance: " + balance);
+                    System.out.println("\n=======================================\n");
                 } else {
                     System.out.println("Invalid transaction choice.");
                 }
@@ -61,4 +73,4 @@ public class MidtermAct3 {
 
         scan.close();
     }
-}
+}n
