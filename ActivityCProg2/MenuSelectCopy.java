@@ -12,7 +12,7 @@ public class MenuSelectCopy {
     System.out.println("\n[1] Breakfast");
     System.out.println("[2] Lunch");
     System.out.println("[3] Dinner");
-    System.out.println("\n=======================================");
+    System.out.println("\n==============================\n");
     System.out.println("\nSelect Menu: ");
     selectMenu = scanner.nextLine();
     price = 0;
@@ -21,7 +21,7 @@ public class MenuSelectCopy {
         System.out.println("\n[1] Pancake             - Php 30.00");
         System.out.println("[2] Tapsilog            - Php 40.00");
         System.out.println("[3] Chixilog            - Php 50.00");
-        System.out.println("\n=======================================");
+        System.out.println("\n==============================\n");
         System.out.println("\nSelect Meal: ");
         selectMeal = scanner.nextLine();
         if (selectMeal.equals("1")) {
@@ -37,7 +37,7 @@ public class MenuSelectCopy {
             System.out.println("\nPrice is 50.00");
         } 
         else {
-            System.out.println("\n=======================================\n");
+            System.out.println("\n==============================\n");
            System.out.println("\nInvalid Input");
             continue;
         }
@@ -46,7 +46,7 @@ public class MenuSelectCopy {
         {
         System.out.println("[1] Fried Chicken       - Php 60.00");
         System.out.println("[2] Porkchop            - Php 70.00");
-            System.out.println("\n=======================================\n");
+            System.out.println("\n==============================\n");
         System.out.print("\nSelect Meal: ");
         selectMeal = scanner.nextLine();
                if (selectMeal.equals("1")) 
@@ -60,7 +60,7 @@ public class MenuSelectCopy {
                    System.out.println("\nPrice is 70.00");
                }
         else {
-                   System.out.println("\n=======================================\n");
+                   System.out.println("\n==============================\n");
                    System.out.println("\nInvalid Input");
             continue;
              }
@@ -70,7 +70,7 @@ public class MenuSelectCopy {
         System.out.println("[1] Adobo        - Php 80.00");
         System.out.println("[2] Sinigang     - Php 90.00");
         System.out.println("[3] Papaitan     - Php 100.00");
-        System.out.println("\n=======================================\n");
+        System.out.println("\n==============================\n");
         System.out.println("\n1Select Meal: ");
         selectMeal = scanner.nextLine();
         if (selectMeal.equals("1")) {
@@ -84,13 +84,13 @@ public class MenuSelectCopy {
             System.out.println("\nPrice is 100.00");
         } 
     else {
-         System.out.println("\n=======================================\n");
+         System.out.println("\n==============================\n");
          System.out.println("\nInvalid Input");
             continue;
         }
     }
      else {
-        System.out.println("\n=======================================\n");
+        System.out.println("\n==============================\n");
         System.out.println("\nInvalid Input");
         continue;
     }

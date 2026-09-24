@@ -36,28 +36,28 @@ public class ProgramLauncher
             switch (choice)
             {
                 case 1:
-                    runProgram("Biodata.java");
+                    runProgram("Biodata");
                     break;
                 case 2:
-                    runProgram("Calculator.java");
+                    runProgram("Calculator");
                     break;
                 case 3:
-                    runProgram("RelationalOperators.java");
+                    runProgram("RelationalOperators");
                     break;
                 case 4:
-                    runProgram("MenuSelect.java");
+                    runProgram("MenuSelect");
                     break;
                 case 5:
-                    runProgram("MenuSelectCopy.java");
+                    runProgram("MenuSelectCopy");
                     break;
                 case 6:
-                    runProgram("MidtermAct1.java");
+                    runProgram("MidtermAct1");
                     break;
                 case 7:
-                    runProgram("MidtermAct2.java");
+                    runProgram("MidtermAct2");
                     break;
                 case 8:
-                    runProgram("MidtermAct3.java");
+                    runProgram("MidtermAct3");
                     break;
                 case 9:
                     System.out.println("Goodbye!");
@@ -68,7 +68,7 @@ public class ProgramLauncher
                     System.out.println("Invalid choice.");
             }
         } 
-        while (choice != 8);
+        while (choice != 9);
     }
 
     private static int readChoice()
@@ -82,12 +82,16 @@ public class ProgramLauncher
         return INPUT.nextInt();
     }
 
-    private static void runProgram(String fileName) 
+    private static void runProgram(String className) 
     {
         try
 
         {
-            Process process = new ProcessBuilder(JAVA_COMMAND, fileName)
+                Process process = new ProcessBuilder(
+                    JAVA_COMMAND,
+                    "-cp",
+                    System.getProperty("java.class.path"),
+                    className)
                     .inheritIO()
                     .start();
             process.waitFor();
@@ -96,7 +100,7 @@ public class ProgramLauncher
         catch (IOException exception) 
 
         {
-            System.out.println("Could not start " + fileName + ": " + exception.getMessage());
+            System.out.println("Could not start " + className + ": " + exception.getMessage());
         } 
 
         catch (InterruptedException exception) 

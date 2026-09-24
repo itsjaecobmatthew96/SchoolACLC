@@ -9,59 +9,59 @@ public class MidtermAct3 {
         int withdraw, deposit;
         int balance = 0;
 
-        System.out.println("\n=======================================\n");
+        System.out.println("\n==============================\n");
         System.out.print("ENTER YOUR 6 DIGITS PIN: ");
         inputPin = scan.nextInt();
 
         while (inputPin != pin) {
-            System.out.println("\n=======================================\n");
+            System.out.println("\n==============================\n");
             System.out.println("INVALID PIN!!!");
-            System.out.println("\n=======================================\n");
+            System.out.println("\n==============================\n");
             System.out.print("ENTER YOUR 6 DIGITS PIN AGAIN : ");
             inputPin = scan.nextInt();
         }
 
         if (inputPin == pin) {
             do {
-                System.out.println("\n=======================================\n");
+                System.out.println("\n==============================\n");
                 System.out.println("~~~ATM NI ALING OLIVER~~~\n");
                 System.out.println("[1] Withdraw");
                 System.out.println("[2] Deposit");
                 System.out.println("[3] Check Balance");
-                System.out.println("\n=======================================\n");
+                System.out.println("\n==============================\n");
                 System.out.print("Select Transaction: ");
                 int transactionChoice = scan.nextInt();
 
                 if (transactionChoice == 1) {
-                    System.out.println("\n=======================================");
+                    System.out.println("\n==============================");
                     System.out.println("\nCurrent balance : " +balance);
-                    System.out.println("\n=======================================\n");
+                    System.out.println("\n==============================\n");
                     System.out.print("Enter amount to withdraw: ");
                     withdraw = scan.nextInt();
 
                     if (withdraw > balance) {
-                        System.out.println("\n=======================================\n");
+                        System.out.println("\n==============================\n");
                         System.out.println("Insufficient balance.");
-                        System.out.println("\n=======================================\n");
+                        System.out.println("\n==============================\n");
                     } 
                     else {
                         balance -= withdraw;
-                        System.out.println("\n=======================================\n");
+                        System.out.println("\n==============================\n");
                         System.out.println("Withdraw successful. \n\nNew balance: " + balance);
-                        System.out.println("\n=======================================\n");
+                        System.out.println("\n==============================\n");
                     }
                 } else if (transactionChoice == 2) {
-                    System.out.println("\n=======================================\n");
+                    System.out.println("\n==============================\n");
                     System.out.print("Enter amount to deposit: ");
                      deposit = scan.nextInt();
                     balance += deposit;
-                    System.out.println("\n=======================================\n");
+                    System.out.println("\n==============================\n");
                     System.out.println("Deposit Successful!!. \n\nNew balance: " + balance);
-                    System.out.println("\n=======================================\n");
+                    System.out.println("\n==============================\n");
                 } else if (transactionChoice == 3) {
-                    System.out.println("\n=======================================\n");
+                    System.out.println("\n==============================\n");
                     System.out.println("Current balance: " + balance);
-                    System.out.println("\n=======================================\n");
+                    System.out.println("\n==============================\n");
                 } else {
                     System.out.println("Invalid transaction choice.");
                 }
@@ -69,7 +69,7 @@ public class MidtermAct3 {
                 System.out.println("Do you want to do another transaction? \n");
                 System.out.println("[1] Yes");
                 System.out.println("[2] No");
-                System.out.println("\n=======================================\n");
+                System.out.println("\n==============================\n");
                 System.out.print("Enter your choice: ");
                 continueProgram = scan.nextInt();
             } while (continueProgram == 1);

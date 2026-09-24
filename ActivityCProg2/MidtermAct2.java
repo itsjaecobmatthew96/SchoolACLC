@@ -21,9 +21,9 @@ public class MidtermAct2
                 }
             }
 
-            System.out.println("\n========================================\n");
+            System.out.println("\n==============================\n");
             System.out.println("INVALID TIME INPUT!!! \n\nPLEASE ENTER A TIME FROM 0000 TO 2359.");
-            System.out.println("\n========================================\n");
+            System.out.println("\n==============================\n");
         }
     }
 
@@ -41,16 +41,16 @@ public class MidtermAct2
         totalHoursWorked = 0;
 
 
-        System.out.println("\n=======================================\n");
+        System.out.println("\n==============================\n");
         System.out.print("Enter your Name: ");
         name = scan.nextLine();
 
-        System.out.println("\n=======================================\n");
+        System.out.println("\n==============================\n");
         System.out.println("Position Choices\n");
         System.out.println("1. IT Head");
         System.out.println("2. Teacher");
         System.out.println("3. Janitor");
-        System.out.println("\n=======================================");
+        System.out.println("\n==============================");
       /*   System.out.print("Enter your Position Choice: ");
         int positionChoice = scan.nextInt();
        // System.out.println("\n=======================================\n");
@@ -97,9 +97,9 @@ public class MidtermAct2
                            else
                            {
                             
-                            System.out.print("\n=======================================\n");
+                            System.out.print("\n==============================\n");
                             System.out.println("\nINVALID INPUT!!! \n\nPLEASE CHOOSE BETWEEN: 1, 2, OR 3.");
-                            System.out.print("\n=======================================\n");
+                            System.out.print("\n==============================\n");
                            }
                 }
 
@@ -108,11 +108,11 @@ public class MidtermAct2
         for (int i = 1; i <= 5; i++) 
         {
 
-            System.out.print("\n======================================\n\n");
+            System.out.print("\n==============================\n\n");
             int timeIn = readMilitaryTime(scan, "Enter your Time IN " + i + " (HHMM): ");
-            System.out.print("\n=======================================\n\n");
+            System.out.print("\n==============================\n\n");
             int timeOut = readMilitaryTime(scan, "Enter your Time OUT " + i + " (HHMM): ");
-            System.out.print("\n=======================================");
+            System.out.print("\n==============================");
 
             if (timeOut < timeIn)
             {
@@ -136,7 +136,7 @@ public class MidtermAct2
         totalDeduction = sssDeduction + pagibigDeduction + philhealthDeduction;
         netPay = grossPay - totalDeduction;
 
-        System.out.println("\n=======================================\n");
+        System.out.println("\n==============================\n");
         System.out.println("Employee Name: " + name);
         System.out.println("Position: " + position);
         System.out.println("Rate per Hour: " + ratePerHour);
@@ -148,7 +148,7 @@ public class MidtermAct2
         System.out.println("Total Deductions: " + totalDeduction);
         System.out.println("\n---------------------------------------\n");
         System.out.println("Net Pay: " + netPay);
-        System.out.println("\n=======================================\n");
+        System.out.println("\n==============================\n");
 
         System.out.print("Enter 1 to process another employee or 0 to exit: ");
         ContinueProgram = scan.nextInt();
