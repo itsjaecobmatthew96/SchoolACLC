@@ -15,7 +15,7 @@ public class ProgramLauncher
 
         do 
         {
-            System.out.println("\n==========================================");
+            System.out.println("\n==============================");
             System.out.println("\nChoose a school activity:");
             System.out.println("\n1. Biodata");
             System.out.println("\n2. Calculator");
@@ -25,13 +25,14 @@ public class ProgramLauncher
             System.out.println("\n6. Midterm Activity 1");
             System.out.println("\n7. Midterm Activity 2");
             System.out.println("\n8. Midterm Activity 3");
-            System.out.println("\n9. Exit");
-            System.out.println("\n==========================================");
+            System.out.println("\n9. Activity");
+            System.out.println("\n10. Exit");
+            System.out.println("\n==============================");
             System.out.print("\nEnter your choice: ");
             
 
             choice = readChoice();
-            System.out.println("\n==========================================");
+           // System.out.println("\n==============================");
 
             switch (choice)
             {
@@ -60,6 +61,9 @@ public class ProgramLauncher
                     runProgram("MidtermAct3");
                     break;
                 case 9:
+                    runProgram("Activity");
+                    break;
+                case 10:
                     System.out.println("Goodbye!");
                     break;
                 // case 9:
@@ -68,7 +72,7 @@ public class ProgramLauncher
                     System.out.println("Invalid choice.");
             }
         } 
-        while (choice != 9);
+        while (choice != 10);
     }
 
     private static int readChoice()

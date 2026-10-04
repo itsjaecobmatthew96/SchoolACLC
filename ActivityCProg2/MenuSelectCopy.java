@@ -6,6 +6,11 @@ public class MenuSelectCopy {
         int continueProgram = 1;
         int quantity;
         int price = 0;
+        int bill;
+        int payment;
+        int change;
+        
+
         while (continueProgram == 1) {
     
     System.out.println("======= Menu ni Aling Oliver =======");
@@ -13,7 +18,7 @@ public class MenuSelectCopy {
     System.out.println("[2] Lunch");
     System.out.println("[3] Dinner");
     System.out.println("\n==============================\n");
-    System.out.println("\nSelect Menu: ");
+    System.out.print("Select Menu: ");
     selectMenu = scanner.nextLine();
     price = 0;
     if (selectMenu.equals("1")) 
@@ -22,7 +27,7 @@ public class MenuSelectCopy {
         System.out.println("[2] Tapsilog            - Php 40.00");
         System.out.println("[3] Chixilog            - Php 50.00");
         System.out.println("\n==============================\n");
-        System.out.println("\nSelect Meal: ");
+        System.out.print("Select Meal: ");
         selectMeal = scanner.nextLine();
         if (selectMeal.equals("1")) {
             price = 30;
@@ -44,10 +49,11 @@ public class MenuSelectCopy {
     }
         else if (selectMenu.equals("2")) 
         {
+        System.out.println("\n==============================\n");
         System.out.println("[1] Fried Chicken       - Php 60.00");
         System.out.println("[2] Porkchop            - Php 70.00");
-            System.out.println("\n==============================\n");
-        System.out.print("\nSelect Meal: ");
+        System.out.println("\n==============================\n");
+        System.out.print("Select Meal: ");
         selectMeal = scanner.nextLine();
                if (selectMeal.equals("1")) 
                {
@@ -71,16 +77,19 @@ public class MenuSelectCopy {
         System.out.println("[2] Sinigang     - Php 90.00");
         System.out.println("[3] Papaitan     - Php 100.00");
         System.out.println("\n==============================\n");
-        System.out.println("\n1Select Meal: ");
+        System.out.print("Select Meal: ");
         selectMeal = scanner.nextLine();
         if (selectMeal.equals("1")) {
             price = 80;
+            System.out.println("\n==============================\n");
             System.out.println("\nPrice is 80.00");
         } else if (selectMeal.equals("2")) {
             price = 90;
+            System.out.println("\n==============================\n");
             System.out.println("\nPrice is 90.00");
         } else if (selectMeal.equals("3")) {
             price = 100;
+            System.out.println("\n==============================\n");
             System.out.println("\nPrice is 100.00");
         } 
     else {
@@ -95,12 +104,30 @@ public class MenuSelectCopy {
         continue;
     }
     
-    System.out.println("\nInput Quantity: ");
+    System.out.println("\n==============================\n");
+    System.out.print("Input Quantity: ");
     quantity = scanner.nextInt();
-    System.out.println("\nTotal Price: " + (quantity * price));
-    System.out.println("Do you want to continue?");
+    bill = quantity * price;
+    System.out.println("\n==============================\n");
+    System.out.println("\nBill: Php " + bill + ".00");
+    do {
+
+        System.out.println("\n==============================\n");
+        System.out.print("Enter amount paid: Php ");
+        payment = scanner.nextInt();
+        if (payment < bill) {
+            System.out.println("\n==============================\n");
+            System.out.println("Insufficient amount. Please enter enough money.");
+        }
+    } while (payment < bill);
+    change = payment - bill;
+    System.out.println("\n==============================\n");
+    System.out.println("Change: Php " + change + ".00");
+    System.out.println("\n==============================\n");
+    System.out.println("Do you want to continue?\n");
     System.out.println("[1] Yes");
     System.out.println("[2] No");
+     System.out.println("\n==============================\n");
     System.out.print("Select: ");
     continueProgram = scanner.nextInt();
     scanner.nextLine();

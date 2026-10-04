@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class MidtermAct3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int pin = 121212;
+        int pin = 121211;
         int inputPin;
         int continueProgram = 1;
-        int withdraw, deposit;
-        int balance = 0;
+        double withdraw, deposit; 
+        double balance = 0.0;     
 
         System.out.println("\n==============================\n");
         System.out.print("ENTER YOUR 6 DIGITS PIN: ");
@@ -25,52 +25,56 @@ public class MidtermAct3 {
             do {
                 System.out.println("\n==============================\n");
                 System.out.println("~~~ATM NI ALING OLIVER~~~\n");
-                System.out.println("[1] Withdraw");
-                System.out.println("[2] Deposit");
-                System.out.println("[3] Check Balance");
+                System.out.println(" WITHDRAW");
+                System.out.println(" DEPOSIT");
+                System.out.println(" CHECK BALANCE");
                 System.out.println("\n==============================\n");
-                System.out.print("Select Transaction: ");
+                System.out.print("SELECT TRANSACTION : ");
                 int transactionChoice = scan.nextInt();
 
                 if (transactionChoice == 1) {
                     System.out.println("\n==============================");
-                    System.out.println("\nCurrent balance : " +balance);
+                    // Formatted to 2 decimal places
+                    System.out.println("\nCURRENT BALANCE : " + String.format("%.2f", balance));
                     System.out.println("\n==============================\n");
-                    System.out.print("Enter amount to withdraw: ");
-                    withdraw = scan.nextInt();
+                    System.out.print("ENTER AMOUNT TO WITHDRAW : ");
+                    withdraw = scan.nextDouble(); 
 
                     if (withdraw > balance) {
                         System.out.println("\n==============================\n");
-                        System.out.println("Insufficient balance.");
+                        System.out.println("INSUFFICIENT BALANCE!!! ");
                         System.out.println("\n==============================\n");
                     } 
                     else {
                         balance -= withdraw;
                         System.out.println("\n==============================\n");
-                        System.out.println("Withdraw successful. \n\nNew balance: " + balance);
+                        // Formatted to 2 decimal places
+                        System.out.println("WITHDRAW SUCCESSFUL!! \n\n==============================\n\n NEW BALANCE: " + String.format("%.2f", balance));
                         System.out.println("\n==============================\n");
                     }
                 } else if (transactionChoice == 2) {
                     System.out.println("\n==============================\n");
-                    System.out.print("Enter amount to deposit: ");
-                     deposit = scan.nextInt();
+                    System.out.print("ENTER AMOUNT TO DEPOSIT : ");
+                    deposit = scan.nextDouble(); 
                     balance += deposit;
                     System.out.println("\n==============================\n");
-                    System.out.println("Deposit Successful!!. \n\nNew balance: " + balance);
+                    // Formatted to 2 decimal places
+                    System.out.println("DEPOSIT SUCCESSFUL!!. \n\nNew balance: " + String.format("%.2f", balance));
                     System.out.println("\n==============================\n");
                 } else if (transactionChoice == 3) {
                     System.out.println("\n==============================\n");
-                    System.out.println("Current balance: " + balance);
+                    // Formatted to 2 decimal places
+                    System.out.println("CURRENT BALANCE : " + String.format("%.2f", balance));
                     System.out.println("\n==============================\n");
                 } else {
-                    System.out.println("Invalid transaction choice.");
+                    System.out.println("INVALID TRANSACTION CHOICE!!! ");
                 }
 
-                System.out.println("Do you want to do another transaction? \n");
-                System.out.println("[1] Yes");
-                System.out.println("[2] No");
+                System.out.println("DO YOU WANT TO DO ANOTHER TRANSACTION? \n");
+                System.out.println(" YES");
+                System.out.println("\n N0");
                 System.out.println("\n==============================\n");
-                System.out.print("Enter your choice: ");
+                System.out.print("ENTER YOUR CHOICE : ");
                 continueProgram = scan.nextInt();
             } while (continueProgram == 1);
         }
