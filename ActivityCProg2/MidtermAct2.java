@@ -36,6 +36,7 @@ public class MidtermAct2
         int grossPay, sssDeduction = 300, pagibigDeduction = 200, philhealthDeduction = 100;
         int totalDeduction, netPay, ContinueProgram = 1;
 
+
         while (ContinueProgram == 1) 
         {
         totalHoursWorked = 0;
@@ -160,5 +161,4 @@ public class MidtermAct2
     }
   
 }
-
 

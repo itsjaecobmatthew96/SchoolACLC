@@ -15,7 +15,7 @@ public class PreFinalsAct1
         while (tries > 0) 
             {
 
-            System.out.println("====================\n"); // Fixed missing semicolon
+            System.out.println("\n====================\n"); // Fixed missing semicolon
             System.out.print("Enter Your Username : ");
             String usNinput = sner.nextLine(); // Fixed method and declared usNinput
 
@@ -73,6 +73,6 @@ public class PreFinalsAct1
             }
         }
 
-        sner.close(); // Moved outside the loop
+        sner.close();
     }
 }

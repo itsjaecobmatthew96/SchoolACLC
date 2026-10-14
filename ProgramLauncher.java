@@ -25,8 +25,10 @@ public class ProgramLauncher
             System.out.println("\n6. Midterm Activity 1");
             System.out.println("\n7. Midterm Activity 2");
             System.out.println("\n8. Midterm Activity 3");
-            System.out.println("\n9. Activity");
-            System.out.println("\n10. Exit");
+            System.out.println("\n9. Prefinals Activity 1");
+            System.out.println("\n10. Prefinals Activity 2");
+            System.out.println("\n11. Activity");
+            System.out.println("\n12. Exit");
             System.out.println("\n==============================");
             System.out.print("\nEnter your choice: ");
             
@@ -61,18 +63,24 @@ public class ProgramLauncher
                     runProgram("MidtermAct3");
                     break;
                 case 9:
-                    runProgram("Activity");
+                    runProgram("PreFinalsAct1");
                     break;
                 case 10:
-                    System.out.println("Goodbye!");
+                    runProgram("PreFinalsAct2");
+                    break;
+                case 11:
+                    runProgram("Activity");
                     break;
                 // case 9:
+                case 12:
+                    System.out.println("Goodbye !!!!");
+                break;
                 //     runProgram("PogramLauncherGUI.java")
                 default:
                     System.out.println("Invalid choice.");
             }
         } 
-        while (choice != 10);
+        while (choice != 12);
     }
 
     private static int readChoice()
